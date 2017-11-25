@@ -17,6 +17,7 @@ group :development, :test do
   gem 'capybara'
   gem 'factory_bot'
   gem 'launchy', require: false
+  gem 'pry-byebug'
   gem 'pry-rails'
   gem 'rspec-rails', '~> 3.5'
   gem 'shoulda'
