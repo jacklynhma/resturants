@@ -1,5 +1,6 @@
 source 'https://rubygems.org/'
 
+gem 'foreman', '~> 0.82.0'
 gem 'rails', '~> 5.1.2'
 gem 'pg', '~> 0.18'
 gem 'puma', '~> 3.7'
@@ -14,7 +15,7 @@ end
 
 group :development, :test do
   gem 'capybara'
-  gem 'factory_girl_rails'
+  gem 'factory_bot'
   gem 'launchy', require: false
   gem 'pry-rails'
   gem 'rspec-rails', '~> 3.5'
