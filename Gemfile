@@ -1,5 +1,6 @@
 source 'https://rubygems.org/'
 
+gem 'http'
 gem 'foreman', '~> 0.82.0'
 gem 'rails', '~> 5.1.2'
 gem 'pg', '~> 0.18'
@@ -15,8 +16,11 @@ end
 
 group :development, :test do
   gem 'capybara'
+# need this to run env files
+  gem 'dotenv-rails'
   gem 'factory_bot'
   gem 'launchy', require: false
+  gem 'pry-byebug'
   gem 'pry-rails'
   gem 'rspec-rails', '~> 3.5'
   gem 'shoulda'
