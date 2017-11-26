@@ -1,4 +1,4 @@
-class Resturant < ApplicationRecord
+class Restaurant < ApplicationRecord
 
   def self.search(term, location)
     api_host = "https://api.yelp.com"

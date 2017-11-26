@@ -9,14 +9,13 @@ class App extends Component {
     this.state = {
       list_of_resturants: []
     }
-    this.searchResturants = this.searchResturants.bind(this);
+    this.searchRestaurants = this.searchRestaurants.bind(this);
   }
 
-  searchResturants(formPayload){
+  searchRestaurants(formPayload){
     fetch(`/api/v1/resturants?term=${formPayload.term}&location=${formPayload.location}`)
     .then(response => {return response.json()})
     .then(responseBody => {
-      debugger
       this.setState({list_of_resturants: responseBody})
     })
   }
@@ -31,7 +30,7 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
-        <SearchForm searchResturants={this.searchResturants}/>
+        <SearchForm searchRestaurants={this.searchRestaurants}/>
       </div>
     );
   }

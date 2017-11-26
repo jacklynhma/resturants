@@ -25,7 +25,7 @@ class SearchForm extends Component {
       term: this.state.term,
       location: this.state.location
     }
-    this.props.searchResturants(formPayload)
+    this.props.searchRestaurants(formPayload)
   }
 
   render() {
