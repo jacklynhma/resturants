@@ -31,18 +31,18 @@ class SearchForm extends Component {
   render() {
 
     return(
-      <div className="row">
+      <div>
         <form onSubmit={this.handleSubmit}>
           <TextField
           value={this.state.term}
-          label="food type"
+          label="Search: "
           name="term"
           handleChange={this.handleChange}
           />
 
           <TextField
           value={this.state.location}
-          label="location"
+          label="Location: "
           name="location"
           handleChange={this.handleChange}
           />

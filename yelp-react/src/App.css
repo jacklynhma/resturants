@@ -22,7 +22,21 @@
   font-size: large;
 }
 
+.tiles {
+  border: 10px solid black;
+}
+img {
+  width: 100px;
+}
+.spinner {
+  animation-name: App-logo-spin, App-logo-spin, App-logo-spin;
+  animation-duration: 1000ms, 400ms, 300ms;
+  animation-iteration-count: 5, 3, 1;
+  animation-timing-function: linear;
+}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+
 }

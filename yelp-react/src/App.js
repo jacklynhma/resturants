@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import SearchForm from './containers/SearchForm'
 import ResturantTile from './components/ResturantTile'
+import SpinnerWheel from './containers/SpinnerWheel'
 import './App.css';
 
 class App extends Component {
@@ -24,11 +25,17 @@ class App extends Component {
   render() {
 
     let result = this.state.list_of_resturants.map((resturant)=> {
-      debugger
+
       return (
         <ResturantTile
           name={resturant.name}
           image={resturant.image_url}
+          location1={resturant.location.address1}
+          location2={resturant.location.address2}
+          location3={resturant.location.address3}
+          city={resturant.location.city}
+          zip_code={resturant.zip_code}
+          url={[resturant.url]}
         />
       )
 
@@ -39,11 +46,9 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React </h1>
         </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-        {result}
         <SearchForm searchRestaurants={this.searchRestaurants}/>
+        <SpinnerWheel />
+        {result}
       </div>
     );
   }
