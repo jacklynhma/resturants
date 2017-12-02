@@ -38,7 +38,6 @@ class App extends Component {
           url={[resturant.url]}
         />
       )
-
     })
     return (
       <div className="App">
